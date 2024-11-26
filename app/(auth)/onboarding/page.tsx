@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Mail, Lock, AlertTriangle, AtSign, Check, X, Pencil } from 'lucide-react'
+import { Mail, Lock, AlertTriangle, AtSign, Check, X, Pencil, CheckCircle, CheckCircle2 } from 'lucide-react'
 import { FloatingInput } from "@/components/forms/floating-input"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
@@ -284,8 +284,8 @@ export default function OnboardingPage() {
                                             {isCheckingUsername ? (
                                                 <div className="text-[13px] text-[#999999]">Checking...</div>
                                             ) : isUsernameAvailable ? (
-                                                <div className="flex items-center gap-1 text-[13px] text-[#34C759]">
-                                                    <Check className="h-4 w-4" />
+                                                <div className="flex items-center gap-1 px-2 py-1 text-[13px] rounded-full bg-[#E2F4E1] text-[#0FBA00]">
+                                                    <CheckCircle2 className="h-4 w-4" />
                                                     Available
                                                 </div>
                                             ) : isUsernameAvailable === false ? (
@@ -372,7 +372,7 @@ export default function OnboardingPage() {
                                     onClick={handlePaste}
                                     className="absolute right-3 top-1/2 -translate-y-1/2 text-[13px] font-medium hover:text-black"
                                 >
-                                    <span className="inline-flex items-center justify-center w-[34px] h-[22px] rounded-full border border-[#e6e6e6]">
+                                    <span className="inline-flex items-center justify-center w-[34px] h-[22px] rounded-full border border-[#e6e6e6] px-1">
                                         Paste
                                     </span>
                                 </button>
@@ -463,35 +463,35 @@ export default function OnboardingPage() {
                                         "flex items-center gap-2 text-[13px]",
                                         passwordRequirements.length ? "text-[#34C759]" : "text-[#666666]"
                                     )}>
-                                        <Check className="h-4 w-4" />
+                                        <CheckCircle2 className="h-4 w-4" />
                                         6-12 characters
                                     </div>
                                     <div className={cn(
                                         "flex items-center gap-2 text-[13px]",
                                         passwordRequirements.uppercase ? "text-[#34C759]" : "text-[#666666]"
                                     )}>
-                                        <Check className="h-4 w-4" />
+                                        <CheckCircle2 className="h-4 w-4" />
                                         Upper case
                                     </div>
                                     <div className={cn(
                                         "flex items-center gap-2 text-[13px]",
                                         passwordRequirements.lowercase ? "text-[#34C759]" : "text-[#666666]"
                                     )}>
-                                        <Check className="h-4 w-4" />
+                                        <CheckCircle2 className="h-4 w-4" />
                                         Lower case
                                     </div>
                                     <div className={cn(
                                         "flex items-center gap-2 text-[13px]",
                                         passwordRequirements.number ? "text-[#34C759]" : "text-[#666666]"
                                     )}>
-                                        <Check className="h-4 w-4" />
+                                        <CheckCircle2 className="h-4 w-4" />
                                         Numeric character
                                     </div>
                                     <div className={cn(
                                         "flex items-center gap-2 text-[13px]",
                                         passwordRequirements.special ? "text-[#34C759]" : "text-[#666666]"
                                     )}>
-                                        <Check className="h-4 w-4" />
+                                        <CheckCircle2 className="h-4 w-4" />
                                         Special characters @#$&*^!
                                     </div>
                                 </div>
