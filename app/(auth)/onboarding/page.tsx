@@ -591,7 +591,7 @@ export default function OnboardingPage() {
 
                 <div className="relative">
                     <div className={cn(
-                        "rounded-[20px] bg-white p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)] min-w-[425px] mx-auto",
+                        "rounded-[20px] bg-white p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)] mx-auto",
                         "relative z-10",
                         (error || createAccountError) && "rounded-b-none shadow-[0_2px_8px_rgba(0,0,0,0.08),0_1px_0_0_#FF3B30]"
                     )}>
